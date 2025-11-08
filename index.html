@@ -29,5 +29,29 @@
 </head>
   <body>
     <div id="root"></div>
+
+    <script type="module">
+      import React from "https://aistudiocdn.com/react@^19.2.0";
+      import { createRoot } from "https://aistudiocdn.com/react-dom@^19.2.0/client";
+    
+      function App() {
+        return (
+          React.createElement("div", { className: "flex flex-col items-center justify-center h-screen text-center" },
+            React.createElement("h1", { className: "text-3xl font-bold text-navy mb-4" }, "DriveMate Prototype"),
+            React.createElement("p", { className: "text-gray-600 max-w-md" },
+              "This is a mock demonstration of how the booking system can look — where travelers can request drivers for long-distance trips, and verified drivers are assigned quickly and efficiently."
+            ),
+            React.createElement("button", {
+              className: "mt-6 px-6 py-3 bg-navy text-white rounded-lg hover:bg-navy-dark"
+            }, "Book a Trip")
+          )
+        );
+      }
+    
+      const root = createRoot(document.getElementById("root"));
+      root.render(React.createElement(App));
+    </script>
+    
   </body>
 </html>
+
